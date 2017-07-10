@@ -1,0 +1,54 @@
+<!-- Here you have the different states that the buttons take during the process -->
+<!-- Before starting -->
+<div ng-if="!started && !paused && !done">
+    <div class="row">
+        <div class="col">
+            <button class="button button-outline button-balanced button-rounded button-block" ng-click='startTimer()'>
+              Start
+            </button>
+        </div>
+    </div>
+</div>
+<!-- Once it is running -->
+<div ng-if="started && !done">
+    <div class="row">
+        <div class="col">
+            <button class="button button-outline button-energized button-rounded button-block" ng-click='pauseTimer()'>
+              Pause
+            </button>
+        </div>
+        <div class="col">
+            <button class="button button-outline button-assertive button-rounded button-block" ng-click='stopTimer()'>
+              Reset
+            </button>
+        </div>
+    </div>
+</div>
+<!-- Once it is paused -->
+<div ng-if="!started && paused && !done">
+    <div class="row">
+        <div class="col">
+            <button class="button button-outline button-balanced button-rounded button-block" ng-click='startTimer()'>
+              Continue
+            </button>
+        </div>
+        <div class="col">
+            <button class="button button-outline button-assertive button-rounded button-block" ng-click='stopTimer()'>
+              Reset
+            </button>
+        </div>
+    </div>
+</div>
+<!-- When it has completed -->
+<div ng-if="done" class="text-center">
+    <div class="row">
+        <button class="button button-outline button-balanced button-rounded button-block" ng-click="modal.hide();stopTimer(true);">
+            Done
+          </button>
+    </div>
+    <div class="text-center">
+        <i class="ion-ribbon-b bigIcon" style="font-size: 40px;"></i>
+        <br>
+        <h2>Congratulations</h2>
+    </div>
+</div>

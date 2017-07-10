@@ -1,0 +1,62 @@
+<!--<ion-header-bar hide-menu="true">
+
+</ion-header-bar>-->
+
+
+<ion-view view-title="Token Generator" hide-nav-bar="true" class="white-text {
+ full-page-bckg">
+
+
+    <!--<ion-content>
+        <h1>Browse</h1>
+
+        <span class="button button-outline button-dark button-block icon ion-ios-timer-outline button-rounded" ng-click="modal.show();selectTimer(30)">&nbsp;30 sec timer</span>
+    </ion-content>-->
+
+    <ion-content class="padding">
+
+        <!--<br>-->
+        <div class="">
+            <div class="item logo ">
+                <img class="center" src="img/logo.jpg" alt="logo" />
+            </div>
+            <div class="company text-center">
+                <h2>COOP RED</h2>
+            </div>
+        </div>
+
+        <br>
+
+
+        <div class="text-center">
+
+            <h5 class="no-margin">YOUR COOP RED TOKEN IS:</h5>
+            <h2 class="title">{{vm.otp}}</h2>
+            <!--<img class="qrcode" ng-src="{{vm.qrImg}}" />-->
+        </div>
+
+        <!-- Here you have the timer itself with the progress and the time on the middle, notice the css addded to align it see style.css -->
+        <div class="progress-wrapper">
+            <div class="progress">
+                {{humanizeDurationTimer(timer,'s')}}
+            </div>
+            <div round-progress max="timeForTimer" current="timer" clockwise="false" color="#ef473a" rounded="true" class="text-center"></div>
+        </div>
+
+
+        <div class="text-center">
+
+            <h5 class="to-bottom">jonpecson.io@gmail.com</h5>
+            <!--<h2 class="title">{{vm.otp}}</h2>-->
+            <!--<img class="qrcode" ng-src="{{vm.qrImg}}" />-->
+        </div>
+
+
+        <!--
+        <label class="item form-button">
+					<button class="button button-block button-primary" type="submit">Generate</button> 
+				</label>
+-->
+
+    </ion-content>
+</ion-view>
